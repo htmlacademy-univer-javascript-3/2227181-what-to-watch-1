@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть»
 
 * Студент: [Николай Онуфриенко](https://up.htmlacademy.ru/univer-js3-urfu/1/user/2227181).
-* Наставник: [Катя Забильская](https://github.com/zblsk).
+* Наставник: [Катя Забильская](https://htmlacademy.ru/profile/id1885251).
 
 ---
 
