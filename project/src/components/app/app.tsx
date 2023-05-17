@@ -1,7 +1,11 @@
-import Main from '../../pages/main';
+import AppRoutes from '../routes/app_routes';
+import '../../css/main.css';
+
 
 function App(): JSX.Element {
-  return < Main />;
+  return (
+    <AppRoutes/>
+  );
 }
 
 export default App;
