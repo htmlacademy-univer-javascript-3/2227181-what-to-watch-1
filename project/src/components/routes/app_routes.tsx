@@ -17,7 +17,6 @@ export default function AppRoutes() {
         <Route path='/films/:id' element={<Film/>}/>
         <Route path='/films/:id/review' element={<AddReview/>}/>
         <Route path='/player/:id' element={<Player/>}/>
-
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
