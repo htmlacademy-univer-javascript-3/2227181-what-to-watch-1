@@ -43,7 +43,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'fantastic-beasts-the-crimes-of-grindelwald': new FilmDataMocks(
     'Fantastic Beasts: The Crimes of Grindelwald',
     require('./mocks_data/img/fantastic-beasts-the-crimes-of-grindelwald.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     Fantastic Beasts: The Crimes of Grindelwald is a 2018 fantasy film directed by David Yates and written by J. K. Rowling. 
     The sequel to Fantastic Beasts and Where to Find Them (2016),
@@ -58,7 +58,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'bohemian-rhapsody': new FilmDataMocks(
     'Bohemian Rhapsody',
     require('./mocks_data/img/bohemian-rhapsody.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     Bohemian Rhapsody is a 2018 biographical musical drama film that focuses on the life of Freddie Mercury, 
     the lead singer of the British rock band Queen, from the formation of the band in 1970 to their 
@@ -73,7 +73,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'macbeth': new FilmDataMocks(
     'Macbeth',
     require('./mocks_data/img/macbeth.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     Macbeth is a 2015 epic historical drama film directed by Justin Kurzel and written for the screen by Jacob Koskoff, 
     Todd Louiso and Michael Lesslie, based on William Shakespeare's play of the same name. The film stars Michael Fassbender 
@@ -87,7 +87,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'aviator': new FilmDataMocks(
     'Aviator',
     require('./mocks_data/img/aviator.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     The Aviator is a 2004 American epic biographical drama film directed by Martin Scorsese and written by John Logan. It stars Leonardo 
     DiCaprio as Howard Hughes, Cate Blanchett as Katharine Hepburn, and Kate Beckinsale as Ava Gardner. The supporting cast features Ian Holm, 
@@ -99,7 +99,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'we-need-to-talk-about-kevin': new FilmDataMocks(
     'We need to talk about Kevin',
     require('./mocks_data/img/we-need-to-talk-about-kevin.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     We Need to Talk About Kevin is a 2003 novel by Lionel Shriver, published by Serpent's Tail, about a fictional school massacre. 
     It is written from the first person perspective of the teenage killer's mother, Eva Khatchadourian, and documents her attempt 
@@ -110,7 +110,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'what-we-do-in-the-shadows': new FilmDataMocks(
     'What We Do in the Shadows',
     require('./mocks_data/img/what-we-do-in-the-shadows.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     What We Do in the Shadows is a 2014 New Zealand mockumentary horror comedy film written and directed by Jemaine Clement and Taika 
     Waititi and the first installment in the What We Do in the Shadows franchise. The film also stars Clement and Waititi, along with 
@@ -121,7 +121,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   ),
   'revenant': new FilmDataMocks(
     'Revenant', '/img/revenant.jpg',
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     The Revenant is a 2015 American action drama film[5] directed by Alejandro G. Iñárritu. The screenplay by Mark L. Smith and Iñárritu 
     is based in part on Michael Punke's 2002 novel The Revenant, which describes frontiersman Hugh Glass's experiences in 1823, and which is 
@@ -132,7 +132,7 @@ export const filmesDataMocks: Record<string, FilmDataMocks> = {
   'johnny-english': new FilmDataMocks(
     'Johnny English',
     require('./mocks_data/img/johnny-english.jpg') as string,
-    require('./mocks_data/video/rickroll.mp4') as string,
+    'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
     `
     Johnny English is a 2003 spy action comedy film directed by Peter Howitt and written by Neal Purvis, Robert Wade and William Davies. 
     It is a British-French venture produced by StudioCanal and Working Title Films, and distributed by Universal Pictures.

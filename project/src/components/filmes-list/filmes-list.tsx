@@ -6,7 +6,8 @@ export function FilmesList(props: { filmesData: Record<string, FilmData> }): JSX
   for (const id of Object.keys(props.filmesData)) {
     const imgSrc = props.filmesData[id].imgPreviewSrc;
     const title = props.filmesData[id].title;
-    filmComponents.push(<SmallFilmCard imgSrc={imgSrc} title={title} id={id}/>);
+    const videoSrc = props.filmesData[id].videoSrc;
+    filmComponents.push(<SmallFilmCard videoSrc={videoSrc} imgSrc={imgSrc} title={title} id={id}/>);
   }
 
   return (
