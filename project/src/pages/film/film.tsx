@@ -1,21 +1,25 @@
 import { Link, useParams } from 'react-router-dom';
-import { FilmData } from '../../mocks/filmes_mocks';
 import NotFound from '../not-found/not-found';
+import { Overview } from '../../components/overview/overview';
+import { Details } from '../../components/details/details';
+import { useState } from 'react';
+import { Reviews } from '../../components/reviews/reviews';
+import { FilmData } from '../../const';
+import { FilmsList } from '../../components/films-list/films-list';
+import { filmsDataMocks } from '../../mocks/films_mocks';
 
-function ratingToString(rating: number): string {
-  if (rating < 3) {
-    return 'Bad';
-  } else if (rating < 5) {
-    return 'Normal';
-  } else if (rating < 8) {
-    return 'Good';
-  } else if (rating < 10) {
-    return 'Very good';
-  }
-  return 'Awesome';
+enum Tab {
+  OverviewTab,
+  ReviewsTab,
+  DetailsTab
 }
 
 function Film(props: { filmesData: Record<string, FilmData> }): JSX.Element {
+  const [tab, setTab] = useState(Tab.OverviewTab);
+  const setOverview = () => { setTab(Tab.OverviewTab); };
+  const setReviews = () => { setTab(Tab.ReviewsTab); };
+  const setDetails = () => { setTab(Tab.DetailsTab); };
+
   const params = useParams();
   if (!(params.id as string in props.filmesData)) {
     return (<NotFound />);
@@ -124,29 +128,22 @@ function Film(props: { filmesData: Record<string, FilmData> }): JSX.Element {
             <div className="film-card__desc">
               <nav className="film-nav film-card__nav">
                 <ul className="film-nav__list">
-                  <li className="film-nav__item film-nav__item--active">
-                    <a href="#" className="film-nav__link">Overview</a>
+                  <li
+                    className={`film-nav__item ${tab === Tab.OverviewTab ? 'film-nav__item--active' : ''}`}
+                  >
+                    <a href="#" className="film-nav__link" onClick={setOverview}>Overview</a>
                   </li>
-                  <li className="film-nav__item">
-                    <a href="#" className="film-nav__link">Details</a>
+                  <li className={`film-nav__item ${tab === Tab.DetailsTab ? 'film-nav__item--active' : ''}`}>
+                    <a href="#" className="film-nav__link" onClick={setDetails}>Details</a>
                   </li>
-                  <li className="film-nav__item">
-                    <a href="#" className="film-nav__link">Reviews</a>
+                  <li className={`film-nav__item ${tab === Tab.ReviewsTab ? 'film-nav__item--active' : ''}`}>
+                    <a href="#" className="film-nav__link" onClick={setReviews}>Reviews</a>
                   </li>
                 </ul>
               </nav>
-
-              <div className="film-rating">
-                <div className="film-rating__score">{filmData.rating}</div>
-                <p className="film-rating__meta">
-                  <span className="film-rating__level">{ratingToString(filmData.rating)}</span>
-                  <span className="film-rating__count">240 ratings</span>
-                </p>
-              </div>
-
-              <div className="film-card__text">
-                {filmData.description}
-              </div>
+              {tab === Tab.OverviewTab && <Overview filmData={filmData} />}
+              {tab === Tab.DetailsTab && <Details filmData={filmData} />}
+              {tab === Tab.ReviewsTab && <Reviews filmData={filmData} />}
             </div>
           </div>
         </div>
@@ -156,43 +153,7 @@ function Film(props: { filmesData: Record<string, FilmData> }): JSX.Element {
         <section className="catalog catalog--like-this">
           <h2 className="catalog__title">More like this</h2>
 
-          <div className="catalog__films-list">
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Fantastic Beasts: The Crimes of Grindelwald</a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="/img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Bohemian Rhapsody</a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="/img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Macbeth</a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="/img/aviator.jpg" alt="Aviator" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Aviator</a>
-              </h3>
-            </article>
-          </div>
+          <FilmsList filmsData={filmsDataMocks/* Для теста*/} />
         </section>
 
         <footer className="page-footer">

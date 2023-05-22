@@ -1,5 +1,5 @@
-import { FilmesList } from '../../components/filmes-list/filmes-list';
-import { FilmData} from '../../mocks/filmes_mocks';
+import { FilmsList } from '../../components/films-list/films-list';
+import { FilmData } from '../../const';
 
 function Main(props: {filmesData: Record<string, FilmData>}): JSX.Element {
   return (
@@ -134,7 +134,7 @@ function Main(props: {filmesData: Record<string, FilmData>}): JSX.Element {
             </li>
           </ul>
 
-          <FilmesList filmesData={props.filmesData}/>
+          <FilmsList filmsData={props.filmesData}/>
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
