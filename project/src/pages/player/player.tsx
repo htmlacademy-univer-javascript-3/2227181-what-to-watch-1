@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
-import { FilmData } from '../../mocks/filmes_mocks';
 import NotFound from '../not-found/not-found';
+import { FilmData } from '../../const';
 
 function Player(props: { filmesData: Record<string, FilmData> }): JSX.Element {
   const params = useParams();

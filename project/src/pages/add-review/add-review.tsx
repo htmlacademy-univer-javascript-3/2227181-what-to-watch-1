@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import NotFound from '../not-found/not-found';
-import { FilmData } from '../../mocks/filmes_mocks';
 import { ReviewForm } from '../../components/review-form/review-form';
+import { FilmData } from '../../const';
 
 function AddReview(props: { filmesData: Record<string, FilmData> }): JSX.Element {
   const params = useParams();

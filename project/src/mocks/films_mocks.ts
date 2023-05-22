@@ -1,15 +1,8 @@
 
 /* eslint @typescript-eslint/no-var-requires: "off" */
-export interface FilmData {
-  title: string;
-  imgPreviewSrc: string;
-  imgPosterSrc: string;
-  rating: number;
-  videoSrc: string;
-  description: string;
-  imgBackgroundSrc: string;
-  genres: Array<string>;
-}
+
+import { Comment, FilmData } from '../const';
+
 
 class FilmDataMocks implements FilmData {
   title: string;
@@ -20,6 +13,28 @@ class FilmDataMocks implements FilmData {
   description: string;
   imgBackgroundSrc: string;
   genres: Array<string>;
+  director = 'Ivan Ivanov';
+  released = Math.ceil(1900 + Math.random() * 123);
+  starring: Array<string> = [
+    'Petrov Petrovich',
+    'Vasiliy Vasilyevich',
+    'Valeriy Valeryivich',
+    'Amogus Amogusovich'
+  ];
+
+  comments: Array<Comment> = Array<Comment>(10).fill(
+    {
+      comment: 'Somthing...',
+      date: '20-05-2022',
+      id: 123,
+      rating: 8.2,
+      user: {
+        id: 1234,
+        name: 'Иван иванов'
+      }
+    });
+
+  runTime = Math.ceil(Math.random() * 200);
 
   constructor(
     title: string, imgSrc: string,
@@ -39,7 +54,7 @@ class FilmDataMocks implements FilmData {
 
 
 // ID --> FilmDataMocks
-export const filmesDataMocks: Record<string, FilmDataMocks> = {
+export const filmsDataMocks: Record<string, FilmDataMocks> = {
   'fantastic-beasts-the-crimes-of-grindelwald': new FilmDataMocks(
     'Fantastic Beasts: The Crimes of Grindelwald',
     require('./mocks_data/img/fantastic-beasts-the-crimes-of-grindelwald.jpg') as string,
